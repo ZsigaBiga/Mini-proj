@@ -1,15 +1,4 @@
 .mozgo {
     text-decoration: underline;
-    animation-name: mozgo;
-    animation-timing-function: ease-in-out;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes mozgo {
-    0% {color: aquamarine;}
-    25% {color: red;}
-    50% {color: yellow;}
-    75% {color: green;}
-    100% {color: purple;}
+    margin-top: 256px;
 }
