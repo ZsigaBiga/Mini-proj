@@ -3,18 +3,26 @@
 function atmenet() {
 
 	let szam = document.getElementById('beszam').value;
-
 	var r, g, b = 0;
-	if(szam < 50) {
-		r = 255;
-		g = Math.round(5.1 * szam);
+
+	if(szam <= 499){
+		r = 255
+		g = Math.round(szam * 0.1 * 2.55);
 	}
 	else {
-		g = 255;
-		r = Math.round(510 - 5.10 * szam);
+		r = 255;
+		g = Math.round(szam * 0.1 * 2.55);
 	}
-	var h = r * 0x10000 + g * 0x100 + b * 0x1;
+	//Megvan az rgb kód
 
-	console.log(beszam);
-	return document.getElementById('szin').innerHTML += '#' + ('000000' + h.toString(16)).slice(-6);
+	console.log(r);
+	console.log(g);
+	console.log(b);
+
+	var h = r * 0x10000 + g * 0x100 + b * 0x1; //hex konvertálás
+
+	var vegSzin = '#' + ('000000' + h.toString(16)).slice(-6); //Színkód betöltése
+	console.log(vegSzin);
+
+	document.getElementById('negyZet').style.backgroundColor = vegSzin;
 }
